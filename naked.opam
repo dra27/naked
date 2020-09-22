@@ -1,0 +1,17 @@
+opam-version: "2.0"
+maintainer: "david.allsopp@metastack.com"
+authors: [ "David Allsopp" ]
+license: "ISC"
+homepage: "https://github.com/dra27/naked"
+dev-repo: "git+https://github.com/dra27/naked.git"
+bug-reports: "https://github.com/dra27/naked/issues"
+build: [
+  [ "dune" "build" "-p" name "-j" jobs "@install" "@runtest" {with-test}]
+]
+depends: [
+  "ocaml"
+  "dune"
+]
+synopsis: "Test package triggering naked pointer warnings"
+description: """
+Minimal example of naked pointers in the OCaml heap."""
